@@ -19,6 +19,10 @@ public class SavedVideoService {
         video.setUpdatedAt(LocalDateTime.now());
         return saveVideoRepository.save(video);
     }
+
+    public List <SaveVideo> getAllVideos() {
+        return saveVideoRepository.findAll();
+    }
     
     public Optional<SaveVideo> getVideoById(String id) {
         return saveVideoRepository.findById(id);
@@ -32,6 +36,10 @@ public class SavedVideoService {
         return saveVideoRepository.findBySubjectId(subjectId);
     }
     
+    public SaveVideo saveVideo(SaveVideo video) {
+    return saveVideoRepository.save(video);
+}
+
     public List<SaveVideo> getVideosByUserAndSubject(String userId, String subjectId) {
         return saveVideoRepository.findByUserIdAndSubjectId(userId, subjectId);
     }

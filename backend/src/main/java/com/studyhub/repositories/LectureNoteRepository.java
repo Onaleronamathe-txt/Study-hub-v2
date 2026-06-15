@@ -7,5 +7,6 @@ public interface LectureNoteRepository extends MongoRepository<LectureNote, Stri
     List<LectureNote> findByUserId(String userId);
     List<LectureNote> findByUserIdAndSubjectId( String userId, String subjectId
     );
+    List<LectureNote> findByUsername(String username);
     List<LectureNote> findBySubject(String subjectId);
 }

@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/lecture-notes")
+@CrossOrigin(origins = "http://localhost:3000")
 public class LectureNoteController {
     
     @Autowired

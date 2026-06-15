@@ -11,4 +11,8 @@ public interface VoteRepository extends MongoRepository<Vote, String> {
     List<Vote> findByTargetId(String targetId);
     List<Vote> findByTargetIdAndType(String targetId, String type);
     Optional<Vote> findByUserIdAndTargetId(String userId, String subjectId);
+    List<Vote> findByQuestionId(String questionId);
+    List<Vote> findByAnswerId(String answerId);
+    Optional<Vote> findByUserIdAndQuestionId(String userId, String questionId);
+    Optional<Vote> findByUserIdAndAnswerId(String userId, String answerId);
 }
